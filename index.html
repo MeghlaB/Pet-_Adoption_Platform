@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy || Home</title>
+    <!-- Style Css -->
+     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/logo.webp" type="image/x-icon">
+    <!-- Fonts Awsome -->
+    <script src="https://kit.fontawesome.com/e88d8b919e.js" crossorigin="anonymous"></script>
+    <!-- Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Gogole font lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Gogole font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind Customize -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                primary : '#0E7A81',
+              },
+              fontFamily:{
+                lato:"Lato",
+                inter:"Inter",
+              },
+            },
+          }
+        }
+      </script>
+</head>
+<body>
+    <header class="container mx-auto font-lato">
+        <!-- NavBar -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Home</a></li>
+                  <li>
+                    <a>Shop</a>
+                  </li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="./images/logo.webp" alt="">
+                <a class=" text-2xl font-bold">Peddy</a>
+              </div> 
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li>
+                  <a>Shop</a>
+                </li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end ">
+                <div class="w-12 h-12 rounded-full border flex items-center justify-center">
+                    <img class="w-10 h-10 " src="https://img.icons8.com/ios/80/gender-neutral-user.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Banner Section -->
+        <div class="hero ">
+            <div class="hero-content text-center">
+              <div class="max-w-max">
+                <p class="py-2text-[20px] lg:text-xl text-gray-400">
+                    Bringing Families Together ❤️‍🔥</p>
+                <h1 class="text-3xl lg:text-5xl font-bold py-3"> Your Path to Adoption <br> Starts Here</h1>
+                <div class="">
+                    <p class="py-3 text-[#131313]">When we work together to bring our best friends home,and we <br> get the country closer to ending the killing of pets in shelters. Let’s bring our best friends home.</p>
+                </div>
+                <a href="#mainSection"><button class="btn bg-primary text-white text-[18px]">View More</button></a>
+                <!-- <button class="btn bg-primary text-white text-[18px]"><a href="#mainSection"></a></button> -->
+                <div>
+                    <img src="./images/pet.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main id="mainSection" class="pb-5">
+        <!-- Adopt  Your  Best Friend -->
+        <section class="font-lato container mx-auto text-center">
+            <div>
+                <h1 class="text-4xl font-bold px-2 lg:px-0">Adopt Your Best Friend</h1>
+                <p class="mx-w-md py-3 px-2 lg:px-0"> The last three resulted in the two cats remaining close friends and play buddies. But one was a new friend <br> o the new stray we took in in July and the other didn’t want anything to do with her. His relationship never changed with the original two.</p>
+            </div>
+        </section>
+        <!-- 4 Buttons with daynamic -->
+        <section id="buttonsDisplay" class="font-inter  container mx-auto  grid grid-cols-2 lg:grid-cols-4 gap-6">
+          
+        </section>
+        <!-- Spinner -->
+      <div id="spinner" class="hidden text-center pt-5">
+        <span class="loading loading-bars loading-lg"></span>
+      </div> 
+        <!-- Best Friend Section -->
+        <section class="container font-lato mx-auto  py-5 px-2 lg:px-0">
+            <div class="flex justify-between items-center">
+                <div class="text-[20px] lg:text-[24px] font-bold">
+                    <h1>Best Deal For you</h1>
+                </div>
+                <div>
+                    <button onclick="sortByPrice()" class="btn bg-primary px-2 lg:px-5 py-1 lg:py-2 text-white text-[18px]">Sort by Price</button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- daynamic page -->
+         <!-- left side -->
+        <section class=" font-inter container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  ">
+            <div  class=" md:col-span-2 lg:col-span-3 border rounded-xl ">
+              <div id="allpetsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 py-5 px-6 lg:px-2">
+
+              </div>
+             
+             
+            </div>
+            <!-- Right side -->
+            <div class="lg:col-span-1 md:col-span-2 w-full">
+              <div id="imageContainer" class="border disabled rounded-xl grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-4 lg:gap-2 px-4 lg:px-0">
+
+              </div> 
+              <!-- <div id="imageContainer" class="border rounded-xl grid grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-2 px-4 lg:px-0">
+
+              </div>  -->
+            </div>
+        </section>
+        <!-- Display Modal -->
+        <section class="font-inter">
+            <div id="modalContainer">
+
+            </div>
+      </section>
+    </main>
+
+  <!-- CountModal -->
+ <div id="countContainer">
+
+ </div>
+
+  
+  <!-- footer -->
+  <footer class="">
+      <div class="bg-black px-24  py-20 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 lg:gap-52">
+          <div>
+              <div class="flex items-center gap-3">
+                  <img src="./images/logo.webp" alt="">
+                  <a class=" text-3xl font-bold text-white pb-4">Peddy</a>
+              </div>
+                <div class="py-3">
+                  <p class="text-xs text-[#FFFFFF] opacity-60">Location: av. Washington 165, NY CA 54003</p>
+                  <p class="text-xs text-[#FFFFFF] opacity-60">Phone: +31 85 964 47 25</p>
+                  <p class="text-xs text-[#FFFFFF] opacity-60">Email: info@yourdomain.com</p>
+                  <p class="text-xs text-[#FFFFFF] opacity-60">Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+                <div class="flex">
+                    <img src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" alt="">
+                    <img src="https://img.icons8.com/?size=48&id=yoQabS8l0qpr&format=png" alt="">
+                    <img src="https://img.icons8.com/?size=48&id=9a46bTk3awwI&format=png" alt="">
+                    <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="">
+                </div>
+            </div>
+            <div>
+               <h1 class=" text-[20px] lg:text-2xl text-white font-bold pb-4">Useful Links</h1>
+               <p class="text-xs text-[#FFFFFF] opacity-60">Home</p>
+               <p class="text-xs text-[#FFFFFF] opacity-60">About Us</p>
+               <p class="text-xs text-[#FFFFFF] opacity-60">Animals</p>
+               <p class="text-xs text-[#FFFFFF] opacity-60">Foundation</p>
+               <p class="text-xs text-[#FFFFFF] opacity-60">Contact</p>
+            </div>
+            <div>
+                <h1 class="text-[20px]  text-2xl text-white font-bold pb-4">Drop a Message</h1>
+                <label for="" class="">
+                    <input class="opacity-25 py-1 px-2 rounded-md text-[#FFFFFF] " type="email" name="" id="" placeholder="Enter Your Email">
+                </label>
+               <div class="py-4">
+                <button class=" bg-primary text-white text-[18px] px-14 py-3 rounded-xl">Subscribe</button>
+               </div>
+            </div>
+        </div>
+  </footer> 
+
+
+<script src="./js/index.js"></script>
+</body>
+</html>
